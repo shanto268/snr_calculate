@@ -92,10 +92,11 @@ def get_average_SNR(signal, repeated, SAxdata, cutOff=10e3):
     average_signal = get_average_of_N_traces(signal,repeated)
     average_lin_signal = dBm2Watt(average_signal)
     SNRs, max_signals, noise_floors = calculate_SNRs(average_lin_signal,SAxdata,cutOff)
-
-    print("SNRs are {}".format(SNRs))
-    print("max_signals are {}".format(max_signals))
-    print("noise_floors are {}".format(noise_floors))
+    
+    print("\n\n")
+    print("Average SNR is {} dBm".format(SNRs[0]))
+    print("Average Max Signal is {} dBm".format(max_signals[0]))
+    print("Average of the noise floor is {} dBm".format(noise_floors[0]))
 
     return SNRs, max_signals, noise_floors
 

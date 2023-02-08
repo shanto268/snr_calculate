@@ -27,5 +27,5 @@ if __name__ == "__main__":
 
     SAxdata, SAydata = lf.getTraceXY(y_channel=SA_channel_name) # gives last trace from SA
 
-    get_average_SNR(signal, repeated, SAxdata,cutOff)
+    get_average_SNR(signal, repeated, SAxdata, cutOff_around_SA_peak)
 
