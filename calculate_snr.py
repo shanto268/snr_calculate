@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     lf = Labber.LogFile(labber_data_file)
 
-    SA_channel_name = 'HP Spectrum Analyzer - Signal'
+    SA_channel_name = lf.getLogChannels()[0]["name"]
 
     signal = lf.getData(name = SA_channel_name)
     linsig = dBm2Watt(signal)
